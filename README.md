@@ -144,3 +144,50 @@ Git установлен через Homebrew командой `brew install git`
 ### 14 Оформление отчёта
 
 Отчёт оформлен в `README.md` с использованием Markdown. Снимки экрана находятся в папке `screenshots`. При оформлении отчёта изменения фиксировались отдельными коммитами.
+
+## Лог команд
+
+```bash
+brew install git
+brew list --versions git
+command -v git
+git --version
+git config --global user.name '4516 Чупырь Д.А.'
+git config --global user.email volv_chokopay@mail.ru
+git config --global --get user.name
+git config --global --get user.email
+git clone git@github.com:zxcmisha/LR6.git LR6
+cd LR6
+git branch -a
+git pull --ff-only
+cat github-file.txt
+git switch -c branch1 origin/branch1
+git log master --oneline
+git log branch1 --oneline
+git show --oneline master
+git diff master branch1 -- mergefile.txt
+git switch master
+git merge branch1
+git status --short
+cat mergefile.txt
+git add mergefile.txt
+git commit -m 'Разрешён конфликт при слиянии branch1 в master'
+git branch -d branch1
+git log --graph --oneline -5
+git branch
+cat mergefile.txt
+git add mergefile.txt
+git commit -m 'Добавлено описание слияния'
+git add mergefile.txt
+git commit -m 'Добавлена информация о branch1'
+git add mergefile.txt
+git commit -m 'Добавлена проверочная строка'
+git log -3 --oneline
+git revert --no-edit HEAD
+git log -4 --oneline
+cat mergefile.txt
+git status --short
+git switch -c report
+git add README.md
+git commit -m 'Начато оформление отчёта'
+```
